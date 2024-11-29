@@ -2,9 +2,9 @@
 
 ## Project Domain
 
-Heart disease is also known as cardiovascular disease which is one of the main causes of death globally.  According to WHO, cardiovascular disease claims around 17.9 million lives every year.  Cardiovascular disease is a group of heart and blood vessel disorders that includes coronary heart disease, cerebrovascular disease, rheumatic heart disease, and other conditions.  Identifying heart disease is a challenge because of the various risk factors that contribute, including diabetes, high blood pressure, high cholesterol, abnormal pulse, and several other factors.  Often, there are no symptoms of underlying disease of the blood vessels.  So many people are unaware of the risks until the condition becomes serious.  As computing and data processing capabilities continue to develop, technology can be used to analyze large amounts of data that were previously difficult to process manually.  Using machine learning algorithms, large and complex medical data can be analyzed to identify patterns and relationships that are not easily visible, allowing for more accurate heart disease risk predictions. 
-Previous research conducted by (Haganta Depari et al., n.d.) used a data set of heart disease patients known as 'Personal Key Indicators of Heart Disease' and applied the Decision Tree, Naive Bayes, and Random Forest classification algorithms.  This research aims to process and analyze data, as well as apply these methods to the classification of heart disease.  The performance evaluation results show that the accuracy of the Decision Tree method is 71%, Naive Bayes is 72%, and Random Forest is 75%, with Random Forest being the best method for classifying heart disease based on the dataset used.
-Machine learning models, such as Random Forest, can be trained using historical patient data to recognize risk factors associated with heart disease, such as blood pressure patterns, cholesterol levels, and medical history.  With classification techniques, this model is able to provide predictions about whether someone is at high risk of experiencing heart disease, as well as identifying risk factors that may not be immediately visible.  The results obtained from this machine learning model are very useful for medical professionals to intervene earlier and provide more appropriate treatment recommendations.  Thus, the application of machine learning can increase accuracy in early detection of heart disease and help reduce deaths related to this disease through more effective prevention.
+Penyakit jantung juga dikenal sebagai penyakit kardiovaskular yang merupakan salah satu penyebab kematian utama secara global. Menurut WHO, penyakit kardiovaskular merenggut sekitar 17,9 juta jiwa setiap tahunnya. Penyakit kardiovaskular adalah sekelompok kelainan jantung dan pembuluh darah yang meliputi penyakit jantung koroner, penyakit serebrovaskular, penyakit jantung rematik, dan kondisi lainnya. Mengidentifikasi penyakit jantung merupakan suatu tantangan karena berbagai faktor risiko yang berkontribusi, antara lain diabetes, tekanan darah tinggi, kolesterol tinggi, denyut nadi tidak normal, dan beberapa faktor lainnya [2].   Seringkali, tidak ada gejala penyakit yang mendasari pembuluh darah. Banyak orang yang tidak menyadari risikonya hingga kondisinya menjadi serius.   Seiring dengan berkembangnya kemampuan komputasi dan pemrosesan data, teknologi dapat digunakan untuk menganalisis data dalam jumlah besar yang sebelumnya sulit diproses secara manual. Dengan menggunakan algoritma pembelajaran mesin, data medis yang besar dan kompleks dapat dianalisis untuk mengidentifikasi pola dan hubungan yang tidak mudah terlihat, sehingga memungkinkan prediksi risiko penyakit jantung yang lebih akurat. 
+Penelitian sebelumnya yang dilakukan oleh (Haganta Depari et al., n.d.) menggunakan kumpulan data pasien penyakit jantung yang dikenal dengan 'Personal Key Indicators of Heart Disease' dan menerapkan algoritma klasifikasi Decision Tree, Naive Bayes, dan Random Forest. Penelitian ini bertujuan untuk mengolah dan menganalisis data, serta menerapkan metode tersebut pada klasifikasi penyakit jantung. Hasil evaluasi kinerja menunjukkan akurasi metode Decision Tree sebesar 71%, Naive Bayes sebesar 72%, dan Random Forest sebesar 75%, dengan Random Forest menjadi metode terbaik untuk mengklasifikasikan penyakit jantung berdasarkan dataset yang digunakan [1].
+Model pembelajaran mesin, seperti Random Forest, dapat dilatih menggunakan data historis pasien untuk mengenali faktor risiko yang terkait dengan penyakit jantung, seperti pola tekanan darah, kadar kolesterol, dan riwayat kesehatan. Dengan teknik klasifikasi, model ini mampu memberikan prediksi apakah seseorang berisiko tinggi mengalami penyakit jantung, serta mengidentifikasi faktor risiko yang mungkin tidak langsung terlihat. Hasil yang diperoleh dari model pembelajaran mesin ini sangat berguna bagi para profesional medis untuk melakukan intervensi lebih awal dan memberikan rekomendasi pengobatan yang lebih tepat. Dengan demikian, penerapan pembelajaran mesin dapat meningkatkan akurasi deteksi dini penyakit jantung dan membantu mengurangi kematian terkait penyakit ini melalui pencegahan yang lebih efektif.
 
 ## Business Understanding
 
@@ -18,26 +18,46 @@ Menjelaskan tujuan dari pernyataan masalah:
 - Menganalisis performa algoritma machine learning Random Forest, dalam klasifikasi penyakit jantung
 
 ## Data Understanding
-Project ini menggunakan dataset yang tersedia secara publik di Kaggle: https://www.kaggle.com/datasets/fedesoriano/heart-failure-prediction. Dataset ini berisi informasi tentang pasien gagal jantung dan dimaksudkan untuk digunakan dalam tugas pemodelan prediktif.
+Project ini menggunakan dataset yang tersedia secara publik di Kaggle: https://www.kaggle.com/datasets/fedesoriano/heart-failure-prediction. Dataset ini berisi informasi tentang pasien gagal jantung dan dimaksudkan untuk digunakan dalam tugas pemodelan prediktif. Dataset terdiri dari 918 data.
+
+Dataset ini dibuat dengan menggabungkan berbagai dataset yang sudah tersedia secara mandiri namun belum digabungkan sebelumnya. Dalam kumpulan data ini, 5 kumpulan data jantung digabungkan dalam 11 fitur umum yang menjadikannya kumpulan data penyakit jantung terbesar yang tersedia sejauh ini untuk tujuan penelitian.  Lima kumpulan data yang digunakan untuk kurasinya adalah:
+- Cleveland: 303 observations
+- Hungarian: 294 observations
+- Switzerland: 123 observations
+- Long Beach VA: 200 observations
+- Stalog (Heart) Data Set: 270 observations
+  
+Total: 1190 observations
+
+Duplicated: 272 observations
+
+Final dataset: 918 observations
+Setiap dataset yang digunakan dapat ditemukan pada Index of heart disease datasets dari UCI Machine Learning Repository pada link berikut : https://archive.ics.uci.edu/ml/machine-learning-databases/heart-disease/
 
 ### Variabel-variabel pada heart failur prediction dataset adalah sebagai berikut:
-- Age: age of the patient [years]
-- Sex: sex of the patient [M: Male, F: Female]
-- ChestPainType: chest pain type [TA: Typical Angina, ATA: Atypical Angina, NAP: -Non-Anginal Pain, ASY: Asymptomatic]
-- RestingBP: resting blood pressure [mm Hg]
-- Cholesterol: serum cholesterol [mm/dl]
-- FastingBS: fasting blood sugar [1: if FastingBS > 120 mg/dl, 0: otherwise]
-- RestingECG: resting electrocardiogram results [Normal: Normal, ST: having ST-T wave abnormality (T wave inversions and/or ST elevation or depression of > 0.05 mV), LVH: showing probable or definite left ventricular hypertrophy by Estes' criteria]
-- MaxHR: maximum heart rate achieved [Numeric value between 60 and 202]
-- ExerciseAngina: exercise-induced angina [Y: Yes, N: No]
+- Age: usia pasien [tahun]
+- Sex: jenis kelamin pasien [M: Pria, F: Wanita]
+- ChestPainType: jenis nyeri dada [TA: Typical Angina, ATA: Atypical Angina, NAP: -Non-Anginal Pain, ASY: Asymptomatic]
+- RestingBP: tekanan darah istirahat [mm Hg]
+- Cholesterol: kolesterol serum [mm/dl]
+- FastingBS: gula darah puasa [1: if FastingBS > 120 mg/dl, 0: otherwise]
+- RestingECG: hasil elektrokardiogram istirahat [Normal: Normal, ST: having ST-T wave abnormality (T wave inversions and/or ST elevation or depression of > 0.05 mV), LVH: showing probable or definite left ventricular hypertrophy by Estes' criteria]
+- MaxHR: detak jantung maksimum tercapai [Numeric value between 60 and 202]
+- ExerciseAngina: angina akibat olahraga [Y: Yes, N: No]
 - Oldpeak: oldpeak = ST [Numeric value measured in depression]
-- ST_Slope: the slope of the peak exercise ST segment [Up: upsloping, Flat: flat, Down: downsloping]
-- HeartDisease: output class [1: heart disease, 0: Normal]
+- ST_Slope: kemiringan puncak latihan segmen ST [Up: upsloping, Flat: flat, Down: downsloping]
+- HeartDisease: kelas keluaran [1: heart disease, 0: Normal]
+--------------------------------------------------------------------------------------------------------------------------------------
+- Terdapat 5 kolom dengan object types, namely: Sex, ChestPainType, RestingECG, ExerciseAngina, ST_Slope 
+- Terdapat 6 kolom numeric dengan type int64, namely: Age, RestigBP, Cholesterol, FastingBS, MaxHR, HeartDisease
+- Terdapat 1 kolom numeric dengan type float64, namely Oldpeak
 
-
+  
 ## Data Preparation
 
-Teknik data preparation yang digunakan pada project ini adalah standardization menggunakan StandardScaler dari scikit-learn. Standarization dapat meningkatkan performa dan stabilitas numerik pada model. Standarisasi diterapkan pada data training (X_train) dan data testing (X_test).
+Teknik data preparation yang digunakan pada project ini adalah standardization menggunakan StandardScaler dari scikit-learn. 
+- Stadandarization merupakan 
+Standarization dapat meningkatkan performa dan stabilitas numerik pada model. Standarisasi diterapkan pada data training (X_train) dan data testing (X_test).
 
 ## Modeling
 Dalam project ini, saya menggunakan tiga model machine learning untuk memprediksi risiko penyakit jantung, yaitu K-Nearest Neighbors (KNN) dan Rndom Forest. 
@@ -68,5 +88,11 @@ F1-Score yang tinggi menunjukkan keseimbangan yang baik antara precision dan rec
           - Random Forest: Kelas negatif (0) 0.87, Kelas positif 0.89
           - KNN: Kelas negatif (0) 0.84, Kelas (positif (1) 0.87
 
-- Kesimpulan: Random Forest memiliki akurasi testing yang sedikit lebih tinggi dan unggul dalam mendeteksi penyakit jantung (precision dan recall untuk kelas positif). Namun, KNN mungkin lebih baik dalam mengidentifikasi pasien yang sehat (precision untuk kelas negatif).
+- Kesimpulan: Random Forest memiliki akurasi testing yang sedikit lebih tinggi dan unggul dalam mendeteksi penyakit jantung (precision dan recall untuk kelas positif). Namun, KNN mungkin lebih baik dalam mengidentifikasi pasien yang sehat (precision untuk kelas negatif). 
 
+
+
+## Referensi
+1. Haganta Depari, D., Widiastiwi, Y., Mega Santoni, M., Ilmu Komputer, F., Pembangunan Nasional Veteran Jakarta, U., Fatmawati Raya, J. R., & Labu, P. (n.d.). Perbandingan Model Decision Tree, Naive Bayes dan Random Forest untuk Prediksi Klasifikasi Penyakit Jantung. JURNAL INFORMATIK Edisi Ke, 18, 2022.
+2. Mohan, S., Thirumalai, C., & Srivastava, G. (2019). Effective heart disease prediction using hybrid machine learning techniques. IEEE Access, 7, 81542–81554. https://doi.org/10.1109/ACCESS.2019.2923707
+ 
