@@ -1,23 +1,21 @@
-# Laporan Proyek Machine Learning - Nama Anda
+# Laporan Proyek Machine Learning - Endritha Pramudya
 
-## Domain Proyek
+## Project Domain
 
-Gagal jantung merupakan salah satu penyebab kematian utama di seluruh dunia. Menurut data global, terdapat lebih dari 64 juta kasus gagal jantung dan angka ini diprediksi akan terus meningkat. Hal ini menyebabkan dampak pada individu, masyarakat, dan sistem kesehatan. Gagal jantung merupakan kondisi dimana jantung tidak dapat memompa darah dengan cukup kuat. Kondisi ini menandakan kegagalan fungsi vital jantung, organ yang bertanggung jawab atas kelangsungan hidup manusia. Prediksi gagal jantung adalah alat untuk meningkatkan hasil pasien dan mengurangi beban pada sistem kesehatan. Dengan prediksi yang akurat, kita dapat menyelamatkan nyawa dan membuka peluang untuk masa depan yang lebih cerah bagi pasien dan sistem kesehatan.
+Heart disease is also known as cardiovascular disease which is one of the main causes of death globally.  According to WHO, cardiovascular disease claims around 17.9 million lives every year.  Cardiovascular disease is a group of heart and blood vessel disorders that includes coronary heart disease, cerebrovascular disease, rheumatic heart disease, and other conditions.  Identifying heart disease is a challenge because of the various risk factors that contribute, including diabetes, high blood pressure, high cholesterol, abnormal pulse, and several other factors.  Often, there are no symptoms of underlying disease of the blood vessels.  So many people are unaware of the risks until the condition becomes serious.  As computing and data processing capabilities continue to develop, technology can be used to analyze large amounts of data that were previously difficult to process manually.  Using machine learning algorithms, large and complex medical data can be analyzed to identify patterns and relationships that are not easily visible, allowing for more accurate heart disease risk predictions. 
+Previous research conducted by (Haganta Depari et al., n.d.) used a data set of heart disease patients known as 'Personal Key Indicators of Heart Disease' and applied the Decision Tree, Naive Bayes, and Random Forest classification algorithms.  This research aims to process and analyze data, as well as apply these methods to the classification of heart disease.  The performance evaluation results show that the accuracy of the Decision Tree method is 71%, Naive Bayes is 72%, and Random Forest is 75%, with Random Forest being the best method for classifying heart disease based on the dataset used.
+Machine learning models, such as Random Forest, can be trained using historical patient data to recognize risk factors associated with heart disease, such as blood pressure patterns, cholesterol levels, and medical history.  With classification techniques, this model is able to provide predictions about whether someone is at high risk of experiencing heart disease, as well as identifying risk factors that may not be immediately visible.  The results obtained from this machine learning model are very useful for medical professionals to intervene earlier and provide more appropriate treatment recommendations.  Thus, the application of machine learning can increase accuracy in early detection of heart disease and help reduce deaths related to this disease through more effective prevention.
 
 ## Business Understanding
 
 ### Problem Statements
 
-- Kurangnya Alat Sistem prediksi gagal jantung yang ada mungkin tidak cukup akurat/efisien.
-- Angka kematian tinggi, lebih dari 64 juta kasus gagal jantung di seluruh dunia, dengan prediksi peningkatan di masa depan.
-- Dampak yang signifikan pada individu. Dampak ini menurunkan kualitas hidup secara signifikan, memengaruhi hubungan, pekerjaan, dan kesehatan mental secara keseluruhan.
+- "Bagaimana penerapan algoritma machine learning Random Forest, dapat meningkatkan akurasi dalam mendeteksi dan memprediksi risiko penyakit jantung pada pasien?
 
 ### Goals
 
 Menjelaskan tujuan dari pernyataan masalah:
-- Meningkatkan efisiensi dan akurasi alat prediksi gagal jantung dapat membantu tenaga kesehatan mengidentifikasi pasien berisiko tinggi lebih cepat dan tepat, sehingga meningkatkan peluang kesembuhan dan kelangsungan hidup pasien.
-- Menurunkan angka kematian global akibat gagal jantung dengan lebih dari 64 juta kasus, sekaligus meningkatkan kualitas hidup pasien di seluruh dunia, agar terhindar dari dampak negatif yang signifikan pada individu, keluarga, dan masyarakat.
-- Mengembangkan solusi untuk mengurangi dampak signifikan gagal jantung pada individu, sehingga mereka dapat menjalani kehidupan yang lebih produktif dan bahagia.
+- Menganalisis performa algoritma machine learning Random Forest, dalam klasifikasi penyakit jantung
 
 ## Data Understanding
 Project ini menggunakan dataset yang tersedia secara publik di Kaggle: https://www.kaggle.com/datasets/fedesoriano/heart-failure-prediction. Dataset ini berisi informasi tentang pasien gagal jantung dan dimaksudkan untuk digunakan dalam tugas pemodelan prediktif.
